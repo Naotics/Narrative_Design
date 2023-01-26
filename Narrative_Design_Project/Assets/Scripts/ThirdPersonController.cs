@@ -7,6 +7,11 @@ public class ThirdPersonController : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
     public float rotationSpeed = 5.0f;
+    private Rigidbody rb;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>(); 
+    }
 
     void Update()
     {
