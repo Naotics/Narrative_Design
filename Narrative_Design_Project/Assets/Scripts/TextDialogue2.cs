@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
-public class TextDialogue : MonoBehaviour
+
+public class TextDialogue2 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
-    public GameObject Button;
 
     private int index;
 
@@ -55,7 +56,7 @@ public class TextDialogue : MonoBehaviour
 
     void nextLine()
     {
-        if(index < lines.Length - 1)
+        if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
@@ -64,7 +65,6 @@ public class TextDialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            Button.SetActive(true);
         }
     }
 }

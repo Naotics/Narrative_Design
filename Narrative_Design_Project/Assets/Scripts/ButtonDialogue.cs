@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TextDialogue : MonoBehaviour
+public class ButtonDialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
-    public GameObject Button;
+    public GameObject NoiseLight;
+    public GameObject DialogueBox2;
 
     private int index;
 
@@ -35,6 +36,7 @@ public class TextDialogue : MonoBehaviour
                 textComponent.text = lines[index];
             }
         }
+
     }
 
     void StartDialogue()
@@ -55,7 +57,7 @@ public class TextDialogue : MonoBehaviour
 
     void nextLine()
     {
-        if(index < lines.Length - 1)
+        if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
@@ -64,7 +66,15 @@ public class TextDialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            Button.SetActive(true);
+            NoiseLight.SetActive(true);
+            EndPart();
         }
+
+        
+    }
+
+    void EndPart()
+    {
+        DialogueBox2.SetActive(true);
     }
 }
