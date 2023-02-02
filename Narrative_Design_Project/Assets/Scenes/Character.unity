@@ -1284,7 +1284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  rotationSpeed: 2
+  rotationSpeed: 0.8
 --- !u!54 &1047289595
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1327,7 +1327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   food: 60
-  foodDicreaseTime: 10
+  foodDicreaseTime: 5
   foodDicreaseAmount: 5
 --- !u!4 &1186078328 stripped
 Transform:
