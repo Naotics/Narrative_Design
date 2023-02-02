@@ -65,6 +65,7 @@ public class TextDialogue2 : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            SceneManager.LoadScene("Character");
         }
     }
 }
