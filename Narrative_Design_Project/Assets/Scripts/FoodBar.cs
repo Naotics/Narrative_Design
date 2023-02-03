@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FoodBar : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class FoodBar : MonoBehaviour
         if (food <= 0)
         {
             //SWITCH TO END SCENE
-
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
